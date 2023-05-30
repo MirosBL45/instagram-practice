@@ -1,0 +1,174 @@
+/******* General Styles *******/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', 'Arial';
+  background: #f1f1f1;
+}
+
+h1 {
+  background: cornflowerblue;
+  color: #6a0c0c;
+}
+
+p {
+  text-decoration: underline;
+}
+
+/*******CHECBOX******/
+.cekboks {
+  border: 2px solid green;
+  padding: 10px 0 30px 30px;
+}
+
+.cekboks label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.cekboks input {
+  position: absolute;
+  transform: scale(0);
+}
+
+.cekboks input:checked ~ .cekiranje {
+  transform: rotate(45deg);
+  width: 20px;
+  margin-left: 16px;
+  border-color: #24c68e;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+}
+
+.cekboks .cekiranje {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 3px solid #424242;
+  border-radius: 6px;
+  transition: all 0.375s;
+}
+
+/******LOADING*******/
+.body_div {
+  background: #4d4d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 27vh;
+}
+
+.body_div .loader {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+
+.body_div .loader span {
+  position: relative;
+  display: inline-block;
+  color: #12e5f4;
+  text-transform: uppercase;
+  animation: ucitavanje 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes ucitavanje {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+/*****FORME******/
+.formaje {
+  border: 2px solid #c2c270;
+}
+
+.formaje .c-form {
+  max-width: 400px;
+  margin: 1rem auto 3rem;
+  background: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.formaje .c-form__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.formaje .c-form__item label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.formaje .c-form__item input {
+  appearance: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.formaje .c-button {
+  display: inline-block;
+  min-width: 100px;
+  width: var(--width, initial);
+  appearance: none;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
+  background: #5E35B1;
+  padding: 12px 32px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.formaje .c-button + .c-button {
+  margin-left: 8px;
+}
+
+.formaje .c-button--ghost {
+  background: transparent;
+  color: var(--color, #000);
+  border-color: currentColor;
+  transition: 0.3s ease-out;
+}
+
+.formaje .c-button--ghost:hover {
+  background: var(--color);
+  border-color: var(--color);
+  color: #fff;
+}
+
+.flexic {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid lightcoral;
+  border-radius: 5px;
+  padding: 10px;
+  background: lightblue;
+  gap: 15px;
+}
+
+.stavka {
+  flex: 1 1 200px;
+  background: lightskyblue;
+  border: 2px solid #e780f0;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
